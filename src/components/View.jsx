@@ -11,13 +11,13 @@ const View = () => {
     )
 
 
-    const fetchData=()=>
+    const fetchData=()=>{
         axios.get("https://dummyjson.com/quotes").then( 
             (response)=>{
                 changequotes(response.data)
             }
         ).catch()
-
+        }
 
          useEffect(()=>{fetchData()},[])
 
